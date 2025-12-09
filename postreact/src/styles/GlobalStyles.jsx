@@ -7,7 +7,7 @@ export const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding: 0;
         box-sizing: border-box;
-        background-color: #ff0000ff;
+        background-color: #3cdb6cff;
         font-family: 'Poppins', sans-serif;
     }
 `;
