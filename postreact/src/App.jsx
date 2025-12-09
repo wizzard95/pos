@@ -1,13 +1,11 @@
-import React from 'react'
-import {useState} from 'react'
-import reactLogo from './assets/react.svg'
-
+import {GlobalStyles} from './index.js';
 
 function App() {
   return (
-    <>
-      <span>Hello World</span>
-    </>
+    <div>
+      <GlobalStyles />
+      <div>hola damian</div>
+    </div>
   )
 }
 
