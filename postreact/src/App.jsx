@@ -1,17 +1,28 @@
-import styled from "styled-components";
-import {GlobalStyles} from './index.js';
+import styled, {ThemeProvider} from "styled-components";
+import {GlobalStyles, MyRoutes, Sidebar, useThemeStore} from './index.js';
 import { Device } from "./styles/breakpoints.jsx";
+/* import { useThemeStore } from "./store/ThemeStore.jsx"; */
+
 
 
 function App() {
+
+  const {themeStyle} = useThemeStore();
+
   return (
+  <ThemeProvider theme={themeStyle}>
    <Container>
     <GlobalStyles />
-    <section className="contentSidebar">sidebar</section>
+    <section className="contentSidebar">
+      <Sidebar />
+    </section>
     <section className="contentMenuambur">menu ambur</section>
-    <section className="contentRouters">routers</section>
+    <section className="contentRouters">
+      <MyRoutes />
+    </section>
 
    </Container>
+   </ThemeProvider>
   );
 }
 const Container = styled.main`
@@ -21,14 +32,15 @@ const Container = styled.main`
 
   .contentSidebar{
     display: none;
-    background-color: rgba(78,45,78,0.5);
+    background-color: rgba(78, 45, 78, 0.5);
   }
   .contentMenuambur{
     position: absolute;
-    background-color: rgba(23, 214, 134, 0.778);
+    background-color: rgba(53, 219, 11, 0.5);
   }
   .contentRouters{
-    background-color: rgba(14, 36, 164, 0.826);
+    display: flex;
+    background-color: rgba(231, 13, 136, 0.5);
     grid-column: 1;
     width: 100%;
 
@@ -40,6 +52,7 @@ const Container = styled.main`
     }
     .contentMenuambur{
       display: none;
+      /* background-color: rgba(53, 45, 78, 0.5); */
     }
     .contentRouters{
       grid-column: 2;
