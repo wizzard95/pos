@@ -6,7 +6,7 @@ export const useThemeStore = create((set, get) => ({
     themeStyle: Light,
     setTheme: ()=>{
         const {theme} = get();
-        set({theme:theme ==="light" ? "dark":"light" });
+        set({theme: theme === "light" ? "dark" : "light" });
         set({themeStyle: theme === "light" ? Dark : Light })
     },
 }))
