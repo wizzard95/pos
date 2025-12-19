@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { useThemeStore } from "../../store/ThemeStore";
+
 export function ToggleTema() {
   const { setTheme } = useThemeStore();
 

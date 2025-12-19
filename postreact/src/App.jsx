@@ -14,7 +14,7 @@ function App() {
 
   return (
   <ThemeProvider theme={themeStyle}>
-   <Container>
+   <Container className={sidebarOpen?"active":""}>
     <GlobalStyles />
     <section className="contentSidebar">
       <Sidebar state={sidebarOpen} setState={
@@ -51,6 +51,10 @@ const Container = styled.main`
   }
   @media ${Device.tablet}{
     grid-template-columns: 88px 1fr;
+
+    &.active{
+      grid-template-columns: 260px 1fr;
+    }
     .contentSidebar{
       display: initial;
     }
