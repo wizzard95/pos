@@ -1,37 +1,62 @@
-import styled from "styled-components"
-import { Title, InputText2 } from "../../index"
-
+import styled from "styled-components";
+import { Title, InputText2, Btnsave, Linea } from "../../index";
+import {v} from "../../styles/variables";
+import { Device } from "../../styles/breakpoints";
 export function LoginTemplate(){
   return ( <Container>
-   <section className="contentCard">
+  
          <div className="card">
-            <Title>Ingresar</Title>
+            <Title $paddingbottom="50px">Ingresar</Title>
             <form>
               <InputText2>
-              <input className="form__field"/>
+              <input className="form__field"
+              placeholder="email" type="text"/>
               </InputText2>
+               <InputText2>
+              <input className="form__field"
+              placeholder="contraseña" type="password"/>
+              </InputText2>
+              
+              <Btnsave
+                titulo="INGRESAR"
+                bgcolor="#1CB0F6"
+                color="255,255,255"
+                width="100%"
+              />
             </form>
-         
+          <Linea>
+              <span>0</span>
+          </Linea>
+              <Btnsave
+                titulo="Google"
+                bgcolor="#fff"
+                icono={<v.iconogoogle/>}
+              />
+
          </div>
 
-  </section>
 </Container>);
 
 }
 const Container = styled.div`
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
     .card {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
         text-align: center;
+        width: 400px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        @media ${Device.tablet} {
+          width: 400px;
+        }
     }
 `;
+
+
