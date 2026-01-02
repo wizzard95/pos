@@ -3,6 +3,8 @@ export * from './main';
 export * from './pages/Home';
 export * from './components/organismos/sidebar/Sidebar';
 export * from './components/templates/HomeTemplate';
+export * from './components/templates/LoginTemplate';
+export * from './components/organismos/formularios/InputText2'
 export * from './store/ThemeStore';
 export * from './routers/routes';
 export * from './styles/GlobalStyles';
@@ -10,4 +12,6 @@ export * from './styles/breakpoints';
 export * from './styles/themes';
 export * from './styles/variables';
 export * from './components/organismos/ToggleTema'
+export * from './components/atomos/Title';
+export * from './pages/Login';
 export * from './utils/DataEstatica';
