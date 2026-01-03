@@ -1,8 +1,10 @@
 import styled from "styled-components";
-import { Title, InputText2, Btnsave, Linea } from "../../index";
+import { Title, InputText2, Btnsave, Linea, Footer, useAuthStore } from "../../index";
 import {v} from "../../styles/variables";
 import { Device } from "../../styles/breakpoints";
 export function LoginTemplate(){
+
+  const {loginGoogle} = useAuthStore()
   return ( <Container>
   
          <div className="card">
@@ -31,9 +33,11 @@ export function LoginTemplate(){
                 titulo="Google"
                 bgcolor="#fff"
                 icono={<v.iconogoogle/>}
+                funcion={loginGoogle}
               />
 
          </div>
+         <Footer/>
 
 </Container>);
 
@@ -44,6 +48,7 @@ const Container = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
+    flex-direction: column;
     .card {
         display: flex;
         flex-direction: column;
