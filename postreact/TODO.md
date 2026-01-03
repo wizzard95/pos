@@ -1,4 +1,0 @@
-- [x] Fix AuthContent.jsx: Add useContext import, change {Children} to {children}
-- [x] Edit App.jsx: Change import from AuthContext to AuthContextProvider
-- [x] Edit App.jsx: Change usage from <AuthContext> to <AuthContextProvider>
-- [x] Test the app to ensure the error is resolved
