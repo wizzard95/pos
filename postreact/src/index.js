@@ -19,5 +19,6 @@ export * from './components/atomos/Icono';
 export * from './components/atomos/Linea';
 export * from './components/moleculas/Btnsave';
 export * from './pages/Login';
-export *from './context/AuthContent';
+export * from './context/AuthContent';
+export * from './hooks/ProtectedRoute';
 export * from './utils/DataEstatica';
