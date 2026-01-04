@@ -13,8 +13,8 @@ export const AuthContextProvider = ({children})=>{
             }else{
                 setUser(session?.user);
             }
-            /* console.log("event", event);
-            console.log("session", session); */
+            console.log("event", event);
+            console.log("session", session);
         });
         return ()=>{
             // estara escuchando en todo momento al back
