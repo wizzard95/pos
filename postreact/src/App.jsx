@@ -3,9 +3,11 @@ import {GlobalStyles,
    MyRoutes,
     Sidebar,
     useThemeStore,
-    AuthContextProvider } from './index.js';
+    AuthContextProvider,
+    Login } from './index.js';
 import { Device } from "./styles/breakpoints.jsx";
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 
@@ -14,13 +16,15 @@ function App() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false)
   const {themeStyle} = useThemeStore();
- 
+ const {pathname} = useLocation();
 
   return (
   <ThemeProvider theme={themeStyle}>
     <AuthContextProvider>
-       <Container className={sidebarOpen?"active":""}>
-    <GlobalStyles />
+      <GlobalStyles />
+    {
+      pathname!="/login"?(<Container className={sidebarOpen?"active":""}>
+  
     <section className="contentSidebar">
       <Sidebar state={sidebarOpen} setState={
         () => setSidebarOpen(!sidebarOpen)}/>
@@ -29,7 +33,10 @@ function App() {
     <section className="contentRouters">
       <MyRoutes />
     </section>
-   </Container>
+   </Container>):(<Login/>)
+    }
+
+       
     </AuthContextProvider>
 
    </ThemeProvider>

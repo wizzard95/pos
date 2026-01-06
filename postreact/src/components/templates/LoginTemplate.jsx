@@ -2,12 +2,18 @@ import styled from "styled-components";
 import { Title, InputText2, Btnsave, Linea, Footer, useAuthStore } from "../../index";
 import {v} from "../../styles/variables";
 import { Device } from "../../styles/breakpoints";
+
+
 export function LoginTemplate(){
 
   const {loginGoogle} = useAuthStore()
-  return ( <Container>
-  
+  return ( 
+      <Container>
          <div className="card">
+         <ContentLogo>
+            <img src={v.logo} />
+            <span>Mi Negocio</span>
+         </ContentLogo>
             <Title $paddingbottom="50px">Ingresar</Title>
             <form>
               <InputText2>
@@ -49,6 +55,7 @@ const Container = styled.div`
     transform: translate(-50%, -50%);
     text-align: center;
     flex-direction: column;
+    color:${({theme}) => theme.text};
     .card {
         display: flex;
         flex-direction: column;
@@ -63,5 +70,16 @@ const Container = styled.div`
         }
     }
 `;
-
+const ContentLogo = styled.section`
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  span{
+    font-weight: 700;
+  }
+  img{
+    width: 10%;
+  }
+`;
 
