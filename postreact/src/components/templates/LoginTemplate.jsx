@@ -6,7 +6,7 @@ import { Device } from "../../styles/breakpoints";
 
 export function LoginTemplate(){
 
-  const {loginGoogle} = useAuthStore()
+  const {loginGoogle} = useAuthStore();
   return ( 
       <Container>
          <div className="card">
@@ -79,7 +79,8 @@ const ContentLogo = styled.section`
     font-weight: 700;
   }
   img{
-    width: 10%;
+    width: 10%; 
   }
+
 `;
 

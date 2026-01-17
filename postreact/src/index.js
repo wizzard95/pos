@@ -21,4 +21,5 @@ export * from './components/moleculas/Btnsave';
 export * from './pages/Login';
 export * from './context/AuthContent';
 export * from './hooks/ProtectedRoute';
+export * from './supabase/supabase.config'
 export * from './utils/DataEstatica';
