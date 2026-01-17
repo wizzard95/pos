@@ -23,4 +23,5 @@ export * from './context/AuthContent';
 export * from './hooks/ProtectedRoute';
 export * from './supabase/supabase.config'
 export * from './supabase/crudCategorias';
+export * from './supabase/crudEmpresa';
 export * from './utils/DataEstatica';
