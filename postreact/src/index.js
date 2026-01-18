@@ -8,6 +8,7 @@ export * from './components/organismos/formularios/InputText2';
 export * from './components/organismos/Footer';
 export * from './store/ThemeStore';
 export * from './store/AuthStore';
+export * from './store/EmpresaStore';
 export * from './routers/routes';
 export * from './styles/GlobalStyles';
 export * from './styles/breakpoints';
@@ -24,4 +25,5 @@ export * from './hooks/ProtectedRoute';
 export * from './supabase/supabase.config'
 export * from './supabase/crudCategorias';
 export * from './supabase/crudEmpresa';
+export * from './supabase/crudUsuarios';
 export * from './utils/DataEstatica';
